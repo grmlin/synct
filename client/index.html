@@ -1,0 +1,119 @@
+<head>
+    <title>synct!</title>
+</head>
+
+<body>
+<div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <ul class="nav pull-right">
+                <li>{{loginButtons align="right"}}</li>
+            </ul>
+            <a class="brand" href="#">synct!</a>
+        </div>
+    </div>
+</div>
+<div class="container" style="padding-top: 50px;">
+    <div class="row clearfix">
+        <section class="content span12">
+            {{#if show_view "home"}}
+            {{> home}}
+            {{/if}}
+
+            {{#if show_view "playground"}}
+            {{> playground}}
+            {{/if}}
+
+            {{#if show_view "remote"}}
+            {{> remote}}
+            {{/if}}
+
+            {{#if show_view "not_found"}}
+            {{> not_found}}
+            {{/if}}
+        </section>
+    </div>
+    <div class="row">
+        <footer class="span12">
+            <hr>
+            <a href="http://andreas-wehr.de">andreas wehr</a> 2012
+        </footer>
+    </div>
+</div>
+
+</body>
+
+
+<template name="home">
+    {{#if currentUser}}
+
+    {{#with remote}}
+    {{#if this}}
+    <form>
+        <fieldset>
+            <h3 class="page-header">1. Share your remote control</h3>
+
+            <p>Select one of the options below:</p>
+            <h4>Generated</h4>
+
+            <p>Open <a href="/playground/{{_id}}" target="_blank"><strong>this site</strong></a> for a quick start</p>
+            
+            <h4>Custom</h4>
+
+            <p>Embed this script tag in one of your HTML files and load the page with any browser.</p>
+            <input type="url" class="input-block-level" value="{{script_url _id}}">
+
+            <p class="text-warning"><strong>Don't use a local copy of this script!</strong></p>
+
+
+        </fieldset>
+    </form>
+    <form id="remote-control">
+        <fieldset>
+            <h3 class="page-header">2. Synchronize connected clients</h3>
+            <h4>Select the target</h4>
+            <input class="target-url input-block-level"
+                   type="url"
+                   value="{{url}}"
+                   required="required"
+                   autofocus="autofocus"
+                   placeholder="Type in the url you want to browse to">
+
+            <p>
+                <button type="submit" class="btn btn-primary">Goto this url</button>
+                <button type="button" class="btn">Cancel</button>
+            </p>
+        </fieldset>
+    </form>
+    
+    <hr>
+    <h4 class="page-header">Connected</h4>
+    {{#with clients _id}}
+    
+    <p class="text-info"><strong>{{client_count this}} client(s) connected</strong></p>
+    <ol class="client-list">
+        {{#each this}}
+        <li><p>{{what}}</p></li>
+        {{/each}}
+    </ol>
+    {{/with}}
+    {{/if}}
+    {{/with}}
+    {{else}}
+    <div class="alert alert-block">
+        <h4>Login!</h4>
+        Please log in to use this service.
+    </div>
+    {{/if}}
+</template>
+<template name="playground">
+    <h2>Welcome to the playground</h2>
+
+    <p>The remote script is loading...</p>
+</template>
+<template name="remote">
+    <h2>remote</h2>
+</template>
+<template name="not_found">
+    <h3>404</h3>
+</template>

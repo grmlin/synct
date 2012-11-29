@@ -1,0 +1,16 @@
+#login-buttons {
+    top: 10px;
+    position: relative;
+}
+.client-list {
+    margin-left: 0;
+}
+.client-list li {
+    list-style-position: inside;
+}
+
+.client-list li p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

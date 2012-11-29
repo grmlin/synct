@@ -1,0 +1,25 @@
+{
+  "meteor": {
+    "git": "https://github.com/meteor/meteor.git",
+    "branch": "master",
+    "commit": "067113a37dd4e7824db1a16d5f7a90c3739eed9c"
+  },
+  "dependencies": {
+    "basePackages": {
+      "view": {
+        "path": "/Users/wehr/dev/grmlin/meteor-view"
+      },
+      "page-js": {}
+    },
+    "packages": {
+      "view": {
+        "path": "/Users/wehr/dev/grmlin/meteor-view"
+      },
+      "page-js": {
+        "git": "https://github.com/tmeasday/meteor-page-js.git",
+        "tag": "v1.3.1",
+        "commit": "ee0b651869928abe50b5d06d7f32ccd2e657883a"
+      }
+    }
+  }
+}
