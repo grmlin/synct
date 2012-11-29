@@ -229,7 +229,7 @@
         currentScript = scripts[scripts.length - 1];
 
 
-    if (true || confirm("Hi there. This page is powered by synct!. Do you want to load the remote controller?\n\nsynct.meteor.com")) {
+    if (confirm("Hi there. This page is powered by synct!. Do you want to load the remote controller?\n\nsynct.meteor.com")) {
         var control = new ControlFrame(getDomain(currentScript.src) + "/remote/" + getParam(currentScript.src, "remote")),
             rcWin = new RemoteWindow(),
             btn = new LoadButton(),

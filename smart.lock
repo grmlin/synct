@@ -6,14 +6,14 @@
   },
   "dependencies": {
     "basePackages": {
-      "view": {
-        "path": "/Users/wehr/dev/grmlin/meteor-view"
-      },
+      "view": {},
       "page-js": {}
     },
     "packages": {
       "view": {
-        "path": "/Users/wehr/dev/grmlin/meteor-view"
+        "git": "https://github.com/grmlin/meteor-view.git",
+        "tag": "v0.1.1",
+        "commit": "89c599198dab6eb8794bdbce8a08513046fc7587"
       },
       "page-js": {
         "git": "https://github.com/tmeasday/meteor-page-js.git",
