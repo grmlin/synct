@@ -1,12 +1,10 @@
 {
-    "meteor" : {
-        "git" : "https://github.com/meteor/meteor.git",
-        "branch" : "master"
-    },
-    "packages" : {
-        "view" : {
-            "path" : "/Users/wehr/dev/grmlin/meteor-view"
-        },
-        "page-js" : {}
-    }
+  "meteor": {
+    "git": "https://github.com/meteor/meteor.git",
+    "branch": "master"
+  },
+  "packages": {
+    "view": {},
+    "page-js": {}
+  }
 }
