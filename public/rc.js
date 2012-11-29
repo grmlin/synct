@@ -43,9 +43,9 @@
         this._layer.appendChild(this._button);
         document.body.appendChild(this._layer);
 
-        this._button.innerHTML = "Open remote browser in new window";
+        this._button.innerHTML = "Open the remote control";
         this._loading.innerHTML = "loading <strong>synct!</strong>...";
-        this._notice.innerHTML = '<a href="http://synct.meteor.com" style="display: block;text-decoration: underline;font-size: 30px;">synct!</a><br>connection successful!<br>';
+        this._notice.innerHTML = '<span style="display: block;font-size: 30px;">synct!</span><br>connected to <a href="href="http://synct.meteor.com" ">synct.meteor.com</a><br><br>';
 
         this._button.addEventListener("click", function () {
             _this.onClick.call(_this);
